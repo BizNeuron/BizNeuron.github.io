@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BizNeuron Testseite</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 id="headline">Welcome to BizNeuron's Test Page</h1>
+        <p id="subtext">This website contains no relevant information. It exists solely for practice purposes.</p>
+        <button id="langToggle">Deutsch</button>
+    </div>
+
+    <script>
+        const headline = document.getElementById("headline");
+        const subtext = document.getElementById("subtext");
+        const button = document.getElementById("langToggle");
+
+        let currentLang = "en";
+
+        button.addEventListener("click", () => {
+            if (currentLang === "en") {
+                // Switch to German
+                headline.textContent = "Willkommen zur Testseite von BizNeuron";
+                subtext.textContent = "Diese Website enthält keinerlei relevante Informationen. Sie dient ausschließlich zu Übungszwecken.";
+                button.textContent = "English";
+                currentLang = "de";
+            } else {
+                // Switch to English
+                headline.textContent = "Welcome to BizNeuron's Test Page";
+                subtext.textContent = "This website contains no relevant information. It exists solely for practice purposes.";
+                button.textContent = "Deutsch";
+                currentLang = "en";
+            }
+        });
+    </script>
+</body>
+</html>
